@@ -114,8 +114,9 @@
   }
 
   .header-txt {
-      width: 50%;
-      padding-right: 100px;
+    
+    width: 50%;
+    padding-right: 50px;
   }
 
   .header-txt h1 {
@@ -126,12 +127,16 @@
   }
 
   .header-img {
-      width: 50%;
+      width: 100%;
+      max-width: 600px;
+      height: auto;
       text-align: center;
   }
 
   .header-img img {
-      width: 750px;
+            width: 100%;
+      max-width: 600px;
+      height: auto;
   }
 
   /* -----------------------ALTERNATIVE HEADER ----------------------- */
@@ -446,4 +451,82 @@
 
 .cap-image img {
     width: 60%;
+}
+
+
+
+
+
+
+/* -------------------- RESPONSIVIDAD -------------------------*/
+
+
+#menu, .menu-icon {
+    display: none;
+}
+
+@media (max-width: 991px) {
+    .menu {
+        padding: 20px;
+        position: relative; 
+    }
+
+    .menu-icon {
+        display: block;
+        width: 30px;
+        cursor: pointer;
+    }
+
+    .navbar {
+        display: none; 
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #1F9CF5;
+        z-index: 1000;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+    }
+
+    .navbar ul li {
+        width: 100%;
+        float: none;
+    }
+
+    #menu:checked ~ .navbar {
+        display: block;
+    }
+}
+
+
+
+@media (max-width: 991px) {
+    .header-content {
+        flex-direction: column; 
+        padding: 50px 20px;
+        text-align: center;
+    }
+
+    .header-txt {
+        width: 100%;
+        padding-right: 0;
+    }
+
+    .header-txt h1 {
+        font-size: 50px; 
+        line-height: 1.2;
+    }
+
+  
+    .about-content iframe {
+        width: 100%;
+        max-width: 560px;
+        height: auto;
+        aspect-ratio: 16 / 9; 
+    }
+    
+    .ab1, .ab2 { display: none; } 
 }
